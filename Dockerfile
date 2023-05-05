@@ -16,8 +16,10 @@ RUN npm install
 COPY . /redbicicletas-fe
 
 ARG FRONTEND_PORT
+ARG SECRET
 
 ENV FRONTEND_PORT=$FRONTEND_PORT
+ENV SECRET=$SECRET
 
 EXPOSE 5000
 CMD [ "npm", "start" ]

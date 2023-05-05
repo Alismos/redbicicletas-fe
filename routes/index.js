@@ -4,7 +4,7 @@ const passport = require('passport');
 const jwt = require('jsonwebtoken');
 
 /* GET home page. */
-const TOKEN_SECRET = 'SECRET';
+const TOKEN_SECRET = process.env.SECRET;
 router.get('/auth/google',
  passport.authenticate('google', { scope : ['profile', 'email'] }));
 
