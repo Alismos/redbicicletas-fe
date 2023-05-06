@@ -33,9 +33,9 @@ passport.deserializeUser(function(obj, cb) {
  cb(null, obj);
 });
 passport.use(new GoogleStrategy({
-   clientID: process.env.GOOGLE_CLIENT_ID,
-   clientSecret: process.env.GOOGLE_SECRET,
-   callbackURL: `http://localhost:${process.env.FRONTEND_PORT}/auth/google/callback`
+   clientID: "155605138549-6dkituk4bg07s0aqr6u4ett9qv4oltsg.apps.googleusercontent.com",
+   clientSecret: "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",
+   callbackURL: "http://localhost:8040/auth/google/callback"
  },
  function(accessToken, refreshToken, profile, done) {
    // here you can create a user in the database if you want to

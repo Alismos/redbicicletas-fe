@@ -15,6 +15,6 @@ router.get('/auth/google/callback',
      expiresIn: 60 * 60,
    });
    res.cookie('auth', token, { httpOnly: true });
-   res.redirect(`http://localhost:${process.env.FRONTEND_PORT}`);
+   res.redirect("http://localhost:8050/");
 });
 module.exports = router;
